@@ -7,7 +7,10 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       //APPBAR
-      appBar: AppBar(title: Text("Adventure"), actions: [
+      appBar: AppBar(
+        backgroundColor: Colors.brown,
+          title: Text("Adventure"),
+          actions: [
         IconButton(
           onPressed: () {},
           icon: Icon(
@@ -141,9 +144,8 @@ class MyHomePage extends StatelessWidget {
       ),
       //FLOATING ACTION BUTTON
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Icon(Icons.message, color: Colors.white)
-      ),
+        backgroundColor: Colors.red,
+          onPressed: () {}, child: Icon(Icons.message, color: Colors.white)),
     );
   }
 }
