@@ -8,6 +8,18 @@ class FormEx extends StatefulWidget {
 }
 
 class _FormExState extends State<FormEx> {
+  //To handle form input changes
+  var _formKey = GlobalKey<FormState>();
+  var isLoading = false;
+
+  void _submit() {
+    final isValid = _formKey.currentState?.validate();
+    if (!isValid!) {
+      return;
+    }
+    _formKey.currentState?.save();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
