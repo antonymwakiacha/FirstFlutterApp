@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_flutter/screens/home_page.dart';
 
 class Intro extends StatelessWidget {
   const Intro({Key? key}) : super(key: key);
@@ -14,7 +15,12 @@ class Intro extends StatelessWidget {
           child: Column(
             children: [
               //FIRST CONTAINER
-              Container(
+              InkWell(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(
+                      builder: (context) => const MyHomePage()));
+                },
+                child: Container(
                   width: MediaQuery.of(context).size.width,
                   height: MediaQuery.of(context).size.height * 0.22,
                   decoration: BoxDecoration(
@@ -29,13 +35,15 @@ class Intro extends StatelessWidget {
                     borderRadius: BorderRadius.circular(20),
                   ),
                   child: Center(
-                    child: Text("Basic Widgets",
-                        style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                            fontWeight: FontWeight.bold),
+                    child: Text(
+                      "Basic Widgets",
+                      style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold),
                     ),
                   ),
+                ),
               ),
             ],
           ),
