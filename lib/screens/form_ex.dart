@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-class FormEx extends StatelessWidget {
+class FormEx extends StatefulWidget {
   const FormEx({Key? key}) : super(key: key);
 
+  @override
+  State<FormEx> createState() => _FormExState();
+}
+
+class _FormExState extends State<FormEx> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
