@@ -34,11 +34,116 @@ class PlantsUI extends StatelessWidget {
           image:DecorationImage(
             image: AssetImage("images/plant1.jpg"),
             fit:BoxFit.cover,
-              colorFilter: ColorFilter.mode(Colors.green.withOpacity(0.5),
+              colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5),
                   BlendMode.darken)
           ),
         ),
-        child: Column(),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children:[
+            SizedBox(height:20,),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal:20),
+              child: Text(
+                "My cool plants",
+                style: TextStyle(
+                    fontSize:22,
+                    fontWeight: FontWeight.bold,
+                    color:Colors.white),),
+            ),
+            Expanded(child: Container(),),
+            Container(
+              width:MediaQuery.of(context).size.width,
+              //padding: EdgeInsets.all(20),
+              decoration: BoxDecoration(
+                color:Color.fromRGBO(28, 37, 51, 1),
+                borderRadius:BorderRadius.only(
+                  topLeft: Radius.circular(20),
+                  topRight: Radius.circular(20),
+                ),
+              ),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children:[
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                  "My Watering Schedule",
+                  style: TextStyle(
+                      fontSize:16,
+                      fontWeight: FontWeight.bold,
+                      color:Colors.white),
+                  ),
+                ),
+                  SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children:[
+                      //img
+                      Container(
+                        width:60,
+                        height:60,
+                        decoration:BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                              image: AssetImage("images/plant1.jpg"),
+                              fit:BoxFit.cover),
+                        ),
+                      ),
+                      //img
+                      Container(
+                        width:60,
+                        height:60,
+                        decoration:BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                              image: AssetImage("images/plant2.jpg"),
+                              fit:BoxFit.cover),
+                        ),
+                      ),
+                      //img
+                      Container(
+                        width:60,
+                        height:60,
+                        decoration:BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                              image: AssetImage("images/plant3.jpg"),
+                              fit:BoxFit.cover),
+                        ),
+                      ),
+                      //img
+                      Container(
+                        width:60,
+                        height:60,
+                        decoration:BoxDecoration(
+                          borderRadius: BorderRadius.circular(5),
+                          image: DecorationImage(
+                              image: AssetImage("images/plant4.jpg"),
+                              fit:BoxFit.cover),
+                        ),
+                      ),
+                    ]
+                  ),
+                  SizedBox(
+                    height:20,),
+                  //White Container
+                  Container(
+                    width:MediaQuery.of(context).size.width,
+                    padding: EdgeInsets.all(20),
+                    decoration:BoxDecoration(color: Colors.white,
+                      borderRadius:BorderRadius.only(
+                        topLeft: Radius.circular(20),
+                        topRight: Radius.circular(20),
+                      ),
+                    ),
+                  ),
+                ]
+              ),
+            ),
+
+          ],
+        ),
       )
     );
   }
